@@ -274,9 +274,17 @@ WWW::MakePassword - Generate passwords for websites using an HMAC
 
 =head1 SYNOPSIS
 
+	# copy to clipboard
 	wpasswd --copy --site foo.com
 
+	# use special options and save them in ~/.wpasswd.yml
+	# (future invocations with --site foo.com will DWIM)
+	wpasswd --login foo --site bar.com --truncate 8 --save
+
 =head1 DESCRIPTION
+
+This module implements a command utility that creates per website addresses
+from a single master password deterministically using L<Digest::HMAC>.
 
 =head1 ATTRIBUTES
 
