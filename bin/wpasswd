@@ -1,0 +1,6 @@
+#!/usr/bin/perl
+
+use WWW::MakePassword;
+
+WWW::MakePassword->new_with_options->run;
+
